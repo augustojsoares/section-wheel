@@ -1,0 +1,31 @@
+.section-wheel {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.section-wheel__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.section-wheel__section {
+  transition: transform 200ms ease;
+}
+.section-wheel__section:focus {
+  outline: none;
+}
+.section-wheel__section:focus-visible > .section-wheel__fill {
+  stroke: #152b3a;
+  stroke-width: 3;
+}
+.section-wheel__icon,
+.section-wheel__label {
+  pointer-events: none;
+}
+.section-wheel__label {
+  user-select: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .section-wheel__section {
+    transition: none;
+  }
+}
